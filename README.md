@@ -30,16 +30,9 @@ A Python tool that converts OpenAPI specifications into comprehensive, LLM-ready
 ## Installation
 
 ```bash
-# Clone or download the repository
-cd open_api_to_mcp
-
 # Install dependencies using uv (recommended)
 uv sync
 
-# Or using pip with a virtual environment
-python -m venv .venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-pip install -r requirements.txt
 ```
 
 ## Quick Start
