@@ -6,10 +6,4 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "jsonref>=1.1.0",
-    "chromadb>=0.4.22",
-    "langchain-chroma>=1.0.0",
-    "langchain-google-genai>=1.0.0",
-    "langchain-community>=0.4.1",
-    "unstructured>=0.18.15",
-    "markdown>=3.9",
 ]
