@@ -57,23 +57,6 @@ python main.py
 # - Output to docs/ directory
 ```
 
-### 2. Set Up Semantic Search (Optional)
-
-For semantic search capabilities, set up your Gemini API key:
-
-```bash
-# Get your API key from https://makersuite.google.com/app/apikey
-export GEMINI_API_KEY='your-api-key-here'
-
-# Index the documentation
-python retrieve.py --index
-
-# Search for endpoints
-python retrieve.py --query "create a new product"
-```
-
-See [RETRIEVAL_GUIDE.md](RETRIEVAL_GUIDE.md) for complete retrieval system documentation.
-
 ## Usage
 
 ### Basic Usage
@@ -244,46 +227,21 @@ For a typical OpenAPI spec with 95 endpoints across 15 categories:
 - **Single file mode**: Generates 1 comprehensive file (~39,000 lines with full resolution)
 - **Processing time**: < 5 seconds for large specs
 
-## Retrieval System
 
-The included semantic search system allows you to:
 
-- Query documentation using natural language
-- Filter by category and HTTP method
-- Search by path patterns
-- Integrate with RAG systems and chatbots
-
-See [RETRIEVAL_GUIDE.md](RETRIEVAL_GUIDE.md) for complete documentation and examples.
-
-### Quick Example
-
-```python
-from retrieve import APIDocRetriever
-
-# Initialize and search
-retriever = APIDocRetriever()
-results = retriever.search("create a new product", n_results=5)
-
-for result in results:
-    print(f"{result['metadata']['method']} {result['metadata']['path']}")
-```
 
 ## Project Structure
 
 ```text
 .
 ├── main.py                  # Documentation generator
-├── retrieve.py              # Semantic search system
-├── example_retrieval.py     # Retrieval examples
 ├── openapi.json            # Your OpenAPI specification
 ├── README.md               # This file
-├── RETRIEVAL_GUIDE.md      # Complete retrieval documentation
 ├── pyproject.toml          # Project dependencies
 ├── docs/                   # Generated documentation
-│   ├── index.md           # Index file
-│   ├── category1.md       # Per-category files
-│   └── category2.md
-└── .chromadb/             # ChromaDB storage (after indexing)
+    ├── index.md           # Index file
+    ├── category1.md       # Per-category files
+    └── category2.md
 ```
 
 ## License
