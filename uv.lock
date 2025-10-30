@@ -1674,7 +1674,7 @@ wheels = [
 ]
 
 [[package]]
-name = "open-api-to-mcp"
+name = "open-api-llm-ready"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
